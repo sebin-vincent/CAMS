@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="763.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litmus7.club.fxmlcontroller.LoginController">
+   <children>
+      <AnchorPane layoutX="386.0" layoutY="-3.0" prefHeight="486.0" prefWidth="377.0" style="-fx-background-color: #9c2b27;">
+         <children>
+            <TextField id="userName" fx:id="username" layoutX="67.0" layoutY="149.0" prefHeight="36.0" prefWidth="227.0" promptText="Username/email">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+               <effect>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TextField>
+            <TextField fx:id="password" layoutX="67.0" layoutY="224.0" prefHeight="36.0" prefWidth="227.0" promptText="Password">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Button layoutX="67.0" layoutY="295.0" mnemonicParsing="false" onAction="#login" prefHeight="36.0" prefWidth="227.0" style="-fx-background-color: #E45652;" text="Signin" textFill="#f2eaea">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font>
+            </Button>
+            <Label layoutX="138.0" layoutY="54.0" text="Sign In" textFill="#fcf9f9">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="warning" layoutX="67.0" layoutY="367.0" prefHeight="17.0" prefWidth="227.0" text="Login to Continue.." textFill="#e8e5f2" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="477.0" fitWidth="385.0" layoutY="1.0" opacity="0.17" pickOnBounds="true">
+         <image>
+            <Image url="@images/audit.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="117.0" layoutY="173.0" text="CAMS" textFill="#f0f2f0">
+         <font>
+            <Font name="System Bold" size="53.0" />
+         </font>
+      </Label>
+      <Label layoutX="63.0" layoutY="314.0" text="Club Audit Management System" textFill="#eff2f0">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

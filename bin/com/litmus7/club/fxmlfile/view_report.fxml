@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="view_Report_Anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="763.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litmus7.club.fxmlcontroller.ViewController">
+   <children>
+      <ImageView fitHeight="484.0" fitWidth="701.0" layoutX="65.0" layoutY="-1.0" opacity="0.18" pickOnBounds="true">
+         <image>
+            <Image url="@images/audit_page.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="year" layoutX="188.0" layoutY="127.0" prefWidth="150.0" />
+      <ComboBox fx:id="quarter" layoutX="513.0" layoutY="127.0" prefWidth="150.0" />
+      <Button layoutX="359.0" layoutY="313.0" mnemonicParsing="false" onAction="#view" prefHeight="45.0" prefWidth="113.0" style="-fx-background-color: E45652;" text="View Report" textFill="#fff9f9">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
+      <Label layoutX="263.0" layoutY="42.0" text="SELECT YEAR AND QUARTER" textFill="#fffafa">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="warning" layoutX="122.0" layoutY="405.0" prefHeight="20.0" prefWidth="334.0" text="Please give inputs.." textFill="#f5f2f2">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="-48.0" layoutY="210.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="161.34" rotate="-90.0" style="-fx-background-color: E45652;" text="View Report" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="-49.0" layoutY="372.0" minHeight="66.0" mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="163.0" rotate="-90.0" style="-fx-background-color: E45652;" text="Logout" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="-48.0" layoutY="48.0" mnemonicParsing="false" onAction="#makeAudit" prefHeight="66.0" prefWidth="162.0" rotate="-90.0" style="-fx-background-color: E45652;" text="Make Audit" textFill="#fffafa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <TextField fx:id="minimum" layoutX="331.0" layoutY="226.0" prefHeight="35.0" prefWidth="169.0" promptText="minimum Attendance in %" />
+      <Label layoutX="149.0" layoutY="131.0" text="Year" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="456.0" layoutY="131.0" text="Quarter" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

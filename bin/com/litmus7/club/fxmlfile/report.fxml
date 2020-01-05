@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="report_Anchorpane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.0" prefWidth="763.0" style="-fx-background-color: #20120f;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.litmus7.club.fxmlcontroller.ReportController">
+   <children>
+      <Button layoutX="-48.0" layoutY="210.0" mnemonicParsing="false" onAction="#viewReport" prefHeight="66.0" prefWidth="161.34" rotate="-90.0" style="-fx-background-color: E45652;" text="View Report" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="-47.0" layoutY="371.0" minHeight="66.0" mnemonicParsing="false" onAction="#logout" prefHeight="65.0" prefWidth="160.0" rotate="-90.0" style="-fx-background-color: E45652;" text="Logout" textFill="#fffefe">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="-48.0" layoutY="48.0" mnemonicParsing="false" onAction="#makeAudit" prefHeight="66.0" prefWidth="162.0" rotate="-90.0" style="-fx-background-color: E45652;" text="Make Audit" textFill="#fffafa">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="66.0" layoutY="-1.0" prefHeight="192.0" prefWidth="701.0" style="-fx-background-color: #000000;">
+         <children>
+            <Separator layoutX="2.0" layoutY="185.0" prefHeight="9.0" prefWidth="690.0" />
+            <TableView fx:id="club_Table" layoutX="11.0" layoutY="21.0" prefHeight="153.0" prefWidth="673.0">
+              <columns>
+                <TableColumn fx:id="clubid" prefWidth="209.0" text="Club ID" />
+                <TableColumn fx:id="clubname" prefWidth="235.0" text="Club Name" />
+                  <TableColumn fx:id="club_president" prefWidth="228.0" text="Pressident" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+      <TabPane layoutX="68.0" layoutY="192.0" prefHeight="286.0" prefWidth="701.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab style="-fx-background-color: #7686F6;" text="Devalokam">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="287.0" prefWidth="383.0" style="-fx-background-color: C8CCE8;">
+                     <children>
+                        <TableView fx:id="devalokam_Table" prefHeight="261.0" prefWidth="710.0" style="-fx-background-color: #7686F6;">
+                        <placeholder>
+        						<Label text="Please check if you have done the audit"/>
+    					</placeholder>
+                          <columns>
+                              <TableColumn fx:id="d_date" prefWidth="133.0" text="Date" />
+                            <TableColumn fx:id="d_actual" prefWidth="143.0" text="Actual Attendance" />
+                            <TableColumn fx:id="d_claimed" prefWidth="133.0" text="Claimed Attendance" />
+                              <TableColumn fx:id="d_minimum" prefWidth="152.0" text="Minimum Attendance" />
+                              <TableColumn fx:id="d_criteria" prefWidth="143.0" text="Minimum Criteria" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab style="-fx-background-color: #65F706;" text="Adholokam">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: C4F8BA;">
+                     <children>
+                        <TableView fx:id="adholokam_Table" prefHeight="260.0" prefWidth="710.0" style="-fx-background-color: #65F706;">
+                           <placeholder>
+        						<Label text="Please check if you have done the audit"/>
+    					</placeholder>
+                           <columns>
+                              <TableColumn fx:id="a_date" prefWidth="120.0" text="Date" />
+                              <TableColumn fx:id="a_actual" prefWidth="134.0" text="Actual Attendance" />
+                              <TableColumn fx:id="a_claimed" prefWidth="139.0" text="Claimed Attendance" />
+                              <TableColumn fx:id="a_minimum" prefWidth="148.0" text="Minimum Attendance" />
+                              <TableColumn fx:id="a_criteria" prefWidth="158.0" text="Minimum Criteria" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab style="-fx-background-color: #0CF7F7;" text="Mayalokham">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: C3F7F7;">
+                     <children>
+                        <TableView fx:id="mayalokam_Table" prefHeight="257.0" prefWidth="710.0" style="-fx-background-color: #0CF7F7;">
+                           <placeholder>
+        						<Label text="Please check if you have done the audit"/>
+    					</placeholder>
+                           <columns>
+                              <TableColumn fx:id="m_date" prefWidth="113.0" text="Date" />
+                              <TableColumn fx:id="m_actual" prefWidth="123.0" text="Actual Attendance" />
+                              <TableColumn fx:id="m_claimed" prefWidth="136.0" text="Claimed Attendance" />
+                              <TableColumn fx:id="m_minimum" prefWidth="172.0" text="Minimum Attendance" />
+                              <TableColumn fx:id="m_criteria" prefWidth="155.0" text="Minimum Criteria" />
+                           </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+          <Tab style="-fx-background-color: #FBF70A;" text="Boolokam">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="258.0" prefWidth="716.0" style="-fx-background-color: #FCFCD5;">
+                     <children>
+                        <TableView fx:id="boolokam_Table" layoutX="-2.0" prefHeight="258.0" prefWidth="711.0" style="-fx-background-color: #FBF70A;">
+                          <placeholder>
+        						<Label text="Please check if you have done the audit"/>
+    					</placeholder>
+                          <columns>
+                            <TableColumn fx:id="b_date" prefWidth="123.0" text="Date" />
+                              <TableColumn fx:id="b_actual" prefWidth="114.0" text="Actual attendace" />
+                              <TableColumn fx:id="b_claimed" prefWidth="141.0" text="Claimed Attendance" />
+                              <TableColumn fx:id="b_minimum" prefWidth="157.0" text="Minimum Attendance" />
+                              <TableColumn fx:id="b_criteria" prefWidth="163.0" text="Minimum Criteria" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
